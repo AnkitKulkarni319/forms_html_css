@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <title>Registration form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Course Registration Form</h1>
+      <form action="">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <table>
+            <tr>
+              <td><label>Name</label></td>
+              <td>
+                <input
+                  type="text"
+                  minlength="3"
+                  name="firstname"
+                  placeholder="Ex:Ankit"
+                  required
+                />
+                <p>Enter Your Name</p>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Surname</label></td>
+              <td>
+                <input
+                  type="text"
+                  minlength="3"
+                  placeholder="Ex:Kulkarni"
+                  required
+                  name="lastname"
+                />
+                <p>Enter Your Surname</p>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Mobile</label></td>
+              <td>
+                <input
+                  type="tel"
+                  minlength="10"
+                  maxlength="10"
+                  placeholder="9898989898 "
+                  required
+                  name="mob"
+                  pattern="[6-9]\d{9}"
+                  title="Number should Start with 6 to 9 and should be 10 digits"
+                />
+                <p>Enter Valid Mobile No</p>
+                <img src="/up.jpg" class="valid" />
+                <img src="/down.jpg" class="invalid" />
+              </td>
+            </tr>
+            <tr>
+              <td><label>Email</label></td>
+              <td>
+                <input
+                  type="email"
+                  placeholder="ankit@gmail.com "
+                  required
+                  name="gmail"
+                  title="Should contain @ and . symbols"
+                />
+                <p>Enter Your Valid Email</p>
+                <img src="/up.jpg" class="valid" />
+                <img src="/down.jpg" class="invalid" />
+              </td>
+            </tr>
+            <tr>
+              <td><label>Password</label></td>
+              <td>
+                <input
+                  type="password"
+                  placeholder="Ankit@123"
+                  minlength="8"
+                  required
+                  name="pwd"
+                  pattern=""
+                  title="Min 8 characters & Should contain one uppercase,lowercase,special characters along with a number"
+                />
+                <p>Enter correct password</p>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Confirm Password</label></td>
+              <td>
+                <input
+                  type="password"
+                  minlength="8"
+                  placeholder="Re enter Password"
+                  required
+                  name="cpwd"
+                  title="Should be same as Password"
+                />
+                <p>Confirm your password</p>
+                <img src="/up.jpg" class="valid" />
+                <img src="/down.jpg" class="invalid" />
+              </td>
+            </tr>
+            <tr>
+              <td><label>Date of Birth</label></td>
+              <td>
+                <input type="date" required name="dob" />
+                <p>Enter Your Date of Birth</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Age</label>
+              </td>
+              <td>
+                <input
+                  type="number"
+                  min="18"
+                  max="100"
+                  required
+                  name="age"
+                  placeholder="Ex:18"
+                  title="Age Should be between 18 and 100"
+                />
+                <p>Enter Your Age</p>
+                <img src="/up.jpg" class="valid" />
+                <img src="/down.jpg" class="invalid" />
+              </td>
+            </tr>
+            <tr>
+              <td><label>Gender</label></td>
+              <td>
+                <input type="radio" name="gender" required value="male" />
+                <label>Male</label>
+                <input type="radio" name="gender" required value="female" />
+                <label>Female</label>
+                <input type="radio" name="gender" required value="others" />
+                <label>Others</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Select Country</label></td>
+              <td>
+                <select>
+                  <option value="India" name="ind" class="opt">
+                    <label>India</label>
+                  </option>
+                  <option value="USA" name="usa" class="opt">
+                    <label>USA</label>
+                  </option>
+                  <option value="Brazil" name="brazil" class="opt">
+                    <label>Brazil</label>
+                  </option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Upload Picture</label></td>
+              <td>
+                <input type="file" name="pic" required />
+                <p>Upload a file</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="btn"><input type="reset" /></td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>Course Details</legend>
+          <table>
+            <tr>
+              <td><label>Select Course</label></td>
+              <td>
+                <select>
+                  <option value="java" name="java" class="course">
+                    <label>Java</label>
+                  </option>
+                  <option value="python" name="py" class="course">
+                    <label>Python</label>
+                  </option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Delivery Mode</label></td>
+              <td>
+                <input type="radio" name="mode" required value="online" /><label
+                  >Online</label
+                >
+                <input
+                  type="radio"
+                  name="mode"
+                  required
+                  value="offline"
+                /><label>Offline</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Institute Name</label></td>
+              <td>
+                <input
+                  type="text"
+                  value="Tap Academy"
+                  readonly
+                  name="institute"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label>Comments</label></td>
+              <td>
+                <textarea
+                  cols="25"
+                  rows="5"
+                  placeholder="Enter your Queries(Optional)"
+                  name="comments"
+                  title="Enter your Queries or Suggestions."
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="submit" /></td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
